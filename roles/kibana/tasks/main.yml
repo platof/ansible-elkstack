@@ -1,0 +1,17 @@
+- name: Install Kibana
+  apt:
+    deb: https://artifacts.elastic.co/downloads/kibana/kibana-7.0.1-amd64.deb
+  sudo: yes
+  dest: /home/vagrant
+
+
+- name: 
+
+
+
+
+  
+- name: Ensure kibana is started
+  service:
+    name: kibana
+    state: started
