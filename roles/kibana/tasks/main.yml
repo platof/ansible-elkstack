@@ -5,10 +5,11 @@
   dest: /home/vagrant
 
 
-- name: 
-
-
-
+- name: copy the kibana config
+  template:
+    src: kibana.j2
+    dest: /etc/kibana/kibana.yml
+  sudo: yes 
 
   
 - name: Ensure kibana is started
