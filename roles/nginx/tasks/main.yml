@@ -5,4 +5,13 @@
 
 - name: copy nginx config file
   template:
+    src: sites-available.j2
+    dest: /etc/nginx/sites-available/default
+  sudo: yes
+
+- name: start nginx
+  service: 
+    name: nginx
+    state: started
+  sudo :yes
         
