@@ -1,12 +1,12 @@
 - name: Ensure redis is present
   apt: 
-   name: redis-server
-   state: latest
+    name: redis-server
+    state: latest
   sudo: true
 
 - name: Ensure redis is started
   service: 
-   name: redis-server
-   state: started 
-   enabled: yes
+    name: redis-server
+    state: started 
+    enabled: yes
   sudo: true

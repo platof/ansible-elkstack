@@ -1,8 +1,8 @@
 - name: enable multiarch
-  command: dpkg --add-architecture
+  command: dpkg --add-architecture i386
 
 - name: install deps
-  apt: name= libc6-i386 update_cache=yes cache_valid=3600
+  apt: name=libc6-i386 update_cache=yes
 
 - name: create directory
   command: mkdir -p /usr/lib/jvm/open-jdk-8
@@ -10,25 +10,29 @@
 - name: download java
   get_url:
     url: https://mirrors.huaweicloud.com/java/jdk/8u151-b12/jdk-8u151-linux-i586.tar.gz
-    dest: /usr/lib/jvm/open-jdk-8
-
+    dest: /usr/lib/jvm/open-jdk-8/
+    mode: '0440'
+    validate_certs: no
 
 - name: unpack archive
-  action: shell tar -xvzf /usr/lib/jvm/open-jdk-8/jdk-8u151-linux-i586.tar.gz /usr/lib/jvm/open-jdk-8/
+  unarchive:
+    src: /usr/lib/jvm/open-jdk-8/jdk-8u151-linux-i586.tar.gz
+    dest: /usr/lib/jvm/open-jdk-8/
+    remote_src: yes
 
 - name: fix ownership
   file: state=directory path=/usr/lib/jvm/open-jdk-8 owner=vagrant group=vagrant recurse=yes
 
-- make java available for system by updating alternatives
-  command: sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/open-jdk-8/bin/java 0
-  command: sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/open-jdk-8/bin/jar 0
-  command: sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/open-jdk-8/bin/javac 0
-  command: sudo update-alternatives --set jar /usr/lib/jvm/open-jdk-8/bin/jar
-  command: sudo update-alternatives --set javac /usr/lib/jvm/open-jdk-8/bin/javac
+- name: update alternatives for java
+  alternatives:
+    name: java
+    path: /usr/lib/jvm/open-jdk-8/jdk1.8.0_151/bin/java
+    link: /usr/bin/java
+    priority: 2000 
 
 - name: Update the bashrc config file
   blockinfile:
-    path: ~/.bashrc
+    path: /home/vagrant/.bashrc
     block: | 
       export PATH=$PATH:$JAVA_HOME/bin
       export JAVA_HOME=/usr/lib/jvm/open-jdk-8/jdk1.8.0_151/bin/

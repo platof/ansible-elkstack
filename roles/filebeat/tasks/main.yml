@@ -1,7 +1,7 @@
 - name: install filebeat
   apt:
-   name: filebeat
-   update_cache: yes
+    name: filebeat
+    update_cache: yes
 
 - name: copy the filebeat config 
   template:
@@ -10,5 +10,5 @@
 
 - name: start filebeat
   service:
-   name: filebeat
-   state: started
+    name: filebeat
+    state: started
