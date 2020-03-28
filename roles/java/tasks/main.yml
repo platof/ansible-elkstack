@@ -1,3 +1,8 @@
+- name: enable multiarch
+  command: dpkg --add-architecture
+
+- name: install deps
+  apt: name= libc6-i386 update_cache=yes cache_valid=3600
 
 - name: create directory
   command: mkdir -p /usr/lib/jvm/open-jdk-8
@@ -15,35 +20,29 @@
   file: state=directory path=/usr/lib/jvm/open-jdk-8 owner=vagrant group=vagrant recurse=yes
 
 - make java available for system by updating alternatives
-  command: sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/open-jdk-8/bin/java 2
-  command: sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/open-jdk-8/bin/jar 2
-  command: sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/open-jdk-8/bin/javac 2
+  command: sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/open-jdk-8/bin/java 0
+  command: sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/open-jdk-8/bin/jar 0
+  command: sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/open-jdk-8/bin/javac 0
   command: sudo update-alternatives --set jar /usr/lib/jvm/open-jdk-8/bin/jar
   command: sudo update-alternatives --set javac /usr/lib/jvm/open-jdk-8/bin/javac
 
-# check remote file
-- stat: path= ~/.bashrc
-  register: file_path
+- name: Update the bashrc config file
+  blockinfile:
+    path: ~/.bashrc
+    block: | 
+      export PATH=$PATH:$JAVA_HOME/bin
+      export JAVA_HOME=/usr/lib/jvm/open-jdk-8/jdk1.8.0_151/bin/
+      export JRE_HOME=/usr/lib/jvm/open-jdk-8/jdk1.8.0_151/jre
+      export JAVA_OPT='-Djava.awt.headless=true'
 
-- copy:
-    content: |
-              export PATH=$PATH:$JAVA_HOME/bin
-              export JAVA_HOME=/usr/lib/jvm/open-jdk-8/jdk1.8.0_151/bin/
-              export JRE_HOME=/usr/lib/jvm/open-jdk-8/jdk1.8.0_151/jre
-              export JAVA_OPT='-Djava.awt.headless=true'
-    dest: ~/.bashrc
+- name: Update the environment file
+  blockinfile:
+    path: /etc/environment
+    block: | 
+      export PATH=$PATH:$JAVA_HOME/bin
+      export JAVA_HOME=/usr/lib/jvm/open-jdk-8/jdk1.8.0_151
+      export JRE_HOME=/usr/lib/jvm/open-jdk-8/jdk1.8.0_151/jre
 
-- copy:
-    content: |
-              export PATH=$PATH:$JAVA_HOME/bin
-              export JAVA_HOME=/usr/lib/jvm/open-jdk-8/jdk1.8.0_151
-              export JRE_HOME=/usr/lib/jvm/open-jdk-8/jdk1.8.0_151/jre
-    dest: /etc/environment
  
-- name: enable multiarch
-  command: dpkg --add-architecture
-
-- name: install deps
-  apt: name= libc6-i386 update_cache=yes cache_valid=3600
  
 
