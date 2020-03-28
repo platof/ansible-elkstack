@@ -1,0 +1,13 @@
+- name: download logstash
+  get_url:
+    url: https://artifacts.elastic.co/downloads/logstash/logstash-7.6.1.deb
+    dest: /home/vagrant
+
+- name: install logstash
+  apt:
+    deb: logstash-7.6.1.deb
+
+- name: start logstash
+  service: 
+    name: logstash
+    state: started 
