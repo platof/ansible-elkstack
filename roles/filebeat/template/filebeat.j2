@@ -1,0 +1,13 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/apache.log
+
+
+output.redis:
+  hosts: 192.168.56.53:6379
+  key: "apache"
+  db: 0
+  timeout: 5
+  data_type: "list"

@@ -2,7 +2,8 @@
   user: vagrant
   become: yes
   roles:
-  - { role: javalogstash }
+  - { role: java }
+  - { role: logstash }
   - { role: filebeat }
   - { role: redis }
   - { role: elasticsearch }
