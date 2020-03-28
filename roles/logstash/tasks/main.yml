@@ -7,6 +7,12 @@
   apt:
     deb: logstash-7.6.1.deb
 
+
+- name: create a new config file
+  template:
+    src: apache.j2
+    dest: /etc/logstash/conf.d/apache.conf
+
 - name: start logstash
   service: 
     name: logstash
