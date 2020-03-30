@@ -31,16 +31,26 @@
 	~
 
 # File marks:
-'0  1  0  ~/roles/java/tasks/main.yml
-'1  9  0  ~/roles/java/tasks/main.yml
-'2  35  22  ~/roles/java/tasks/main.yml
-'3  10  0  ~/roles/java/tasks/main.yml
-'4  22  4  ~/roles/java/tasks/main.yml
-'5  16  2  ~/roles/java/tasks/main.yml
-'6  12  9  ~/roles/java/tasks/main.yml
-'7  16  3  ~/roles/java/tasks/main.yml
+'0  1  0  ~/roles/filebeat/tasks/main.yml
+'1  9  17  ~/roles/filebeat/template/filebeat.j2
+'2  1  0  ~/roles/redis/tasks/main.yml
+'3  10  1  ~/roles/redis/tasks/main.yml
+'4  3  58  ~/roles/redis/tasks/main.yml
+'5  7  21  ~/roles/redis/tasks/main.yml
+'6  2  23  ~/roles/redis/tasks/main.yml
+'7  1  0  ~/roles/java/tasks/main.yml
+'8  9  0  ~/roles/java/tasks/main.yml
+'9  35  22  ~/roles/java/tasks/main.yml
 
 # Jumplist (newest first):
+-'  1  0  ~/roles/filebeat/tasks/main.yml
+-'  9  17  ~/roles/filebeat/template/filebeat.j2
+-'  1  0  ~/roles/filebeat/template/filebeat.j2
+-'  1  0  ~/roles/redis/tasks/main.yml
+-'  10  1  ~/roles/redis/tasks/main.yml
+-'  3  58  ~/roles/redis/tasks/main.yml
+-'  7  21  ~/roles/redis/tasks/main.yml
+-'  2  23  ~/roles/redis/tasks/main.yml
 -'  1  0  ~/roles/java/tasks/main.yml
 -'  9  0  ~/roles/java/tasks/main.yml
 -'  35  22  ~/roles/java/tasks/main.yml
@@ -51,8 +61,112 @@
 -'  12  9  ~/roles/java/tasks/main.yml
 -'  18  58  ~/roles/java/tasks/main.yml
 -'  15  3  ~/roles/java/tasks/main.yml
+-'  1  0  ~/roles/java/tasks/main.yml
+-'  9  0  ~/roles/java/tasks/main.yml
+-'  35  22  ~/roles/java/tasks/main.yml
+-'  10  0  ~/roles/java/tasks/main.yml
+-'  14  0  ~/roles/java/tasks/main.yml
+-'  16  0  ~/roles/java/tasks/main.yml
+-'  22  4  ~/roles/java/tasks/main.yml
+-'  12  9  ~/roles/java/tasks/main.yml
+-'  18  58  ~/roles/java/tasks/main.yml
+-'  15  3  ~/roles/java/tasks/main.yml
+-'  1  0  ~/roles/java/tasks/main.yml
+-'  9  0  ~/roles/java/tasks/main.yml
+-'  35  22  ~/roles/java/tasks/main.yml
+-'  10  0  ~/roles/java/tasks/main.yml
+-'  14  0  ~/roles/java/tasks/main.yml
+-'  16  0  ~/roles/java/tasks/main.yml
+-'  22  4  ~/roles/java/tasks/main.yml
+-'  12  9  ~/roles/java/tasks/main.yml
+-'  18  58  ~/roles/java/tasks/main.yml
+-'  15  3  ~/roles/java/tasks/main.yml
+-'  1  0  ~/roles/java/tasks/main.yml
+-'  9  0  ~/roles/java/tasks/main.yml
+-'  35  22  ~/roles/java/tasks/main.yml
+-'  10  0  ~/roles/java/tasks/main.yml
+-'  14  0  ~/roles/java/tasks/main.yml
+-'  16  0  ~/roles/java/tasks/main.yml
+-'  22  4  ~/roles/java/tasks/main.yml
+-'  12  9  ~/roles/java/tasks/main.yml
+-'  18  58  ~/roles/java/tasks/main.yml
+-'  15  3  ~/roles/java/tasks/main.yml
+-'  1  0  ~/roles/java/tasks/main.yml
+-'  9  0  ~/roles/java/tasks/main.yml
+-'  35  22  ~/roles/java/tasks/main.yml
+-'  10  0  ~/roles/java/tasks/main.yml
+-'  14  0  ~/roles/java/tasks/main.yml
+-'  16  0  ~/roles/java/tasks/main.yml
+-'  22  4  ~/roles/java/tasks/main.yml
+-'  12  9  ~/roles/java/tasks/main.yml
+-'  18  58  ~/roles/java/tasks/main.yml
+-'  15  3  ~/roles/java/tasks/main.yml
+-'  1  0  ~/roles/java/tasks/main.yml
+-'  9  0  ~/roles/java/tasks/main.yml
+-'  35  22  ~/roles/java/tasks/main.yml
+-'  10  0  ~/roles/java/tasks/main.yml
+-'  14  0  ~/roles/java/tasks/main.yml
+-'  16  0  ~/roles/java/tasks/main.yml
+-'  22  4  ~/roles/java/tasks/main.yml
+-'  12  9  ~/roles/java/tasks/main.yml
+-'  18  58  ~/roles/java/tasks/main.yml
+-'  15  3  ~/roles/java/tasks/main.yml
+-'  1  0  ~/roles/java/tasks/main.yml
+-'  9  0  ~/roles/java/tasks/main.yml
+-'  35  22  ~/roles/java/tasks/main.yml
+-'  10  0  ~/roles/java/tasks/main.yml
+-'  14  0  ~/roles/java/tasks/main.yml
+-'  16  0  ~/roles/java/tasks/main.yml
+-'  22  4  ~/roles/java/tasks/main.yml
+-'  12  9  ~/roles/java/tasks/main.yml
+-'  18  58  ~/roles/java/tasks/main.yml
+-'  15  3  ~/roles/java/tasks/main.yml
+-'  1  0  ~/roles/java/tasks/main.yml
+-'  9  0  ~/roles/java/tasks/main.yml
+-'  35  22  ~/roles/java/tasks/main.yml
+-'  10  0  ~/roles/java/tasks/main.yml
+-'  14  0  ~/roles/java/tasks/main.yml
+-'  16  0  ~/roles/java/tasks/main.yml
+-'  22  4  ~/roles/java/tasks/main.yml
+-'  12  9  ~/roles/java/tasks/main.yml
+-'  18  58  ~/roles/java/tasks/main.yml
+-'  15  3  ~/roles/java/tasks/main.yml
+-'  1  0  ~/roles/java/tasks/main.yml
+-'  9  0  ~/roles/java/tasks/main.yml
+-'  35  22  ~/roles/java/tasks/main.yml
+-'  10  0  ~/roles/java/tasks/main.yml
+-'  14  0  ~/roles/java/tasks/main.yml
+-'  16  0  ~/roles/java/tasks/main.yml
+-'  22  4  ~/roles/java/tasks/main.yml
+-'  12  9  ~/roles/java/tasks/main.yml
+-'  18  58  ~/roles/java/tasks/main.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/roles/filebeat/tasks/main.yml
+	"	1	0
+
+> ~/roles/filebeat/template/filebeat.j2
+	"	9	17
+	^	9	18
+	.	9	17
+	+	9	17
+
+> ~/roles/redis/tasks/main.yml
+	"	1	0
+	^	10	2
+	.	10	2
+	+	1	20
+	+	2	24
+	+	2	39
+	+	7	15
+	+	1	0
+	+	2	45
+	+	7	21
+	+	2	23
+	+	2	43
+	+	3	58
+	+	10	2
 
 > ~/roles/java/tasks/main.yml
 	"	1	0
