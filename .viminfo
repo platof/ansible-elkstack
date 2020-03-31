@@ -31,18 +31,19 @@
 	~
 
 # File marks:
-'0  1  0  ~/roles/filebeat/tasks/main.yml
-'1  9  17  ~/roles/filebeat/template/filebeat.j2
-'2  1  0  ~/roles/redis/tasks/main.yml
-'3  10  1  ~/roles/redis/tasks/main.yml
-'4  3  58  ~/roles/redis/tasks/main.yml
-'5  7  21  ~/roles/redis/tasks/main.yml
-'6  2  23  ~/roles/redis/tasks/main.yml
-'7  1  0  ~/roles/java/tasks/main.yml
-'8  9  0  ~/roles/java/tasks/main.yml
-'9  35  22  ~/roles/java/tasks/main.yml
+'0  1  0  ~/roles/elasticsearch/tasks/main.yml
+'1  1  0  ~/roles/filebeat/tasks/main.yml
+'2  9  17  ~/roles/filebeat/template/filebeat.j2
+'3  1  0  ~/roles/redis/tasks/main.yml
+'4  10  1  ~/roles/redis/tasks/main.yml
+'5  3  58  ~/roles/redis/tasks/main.yml
+'6  7  21  ~/roles/redis/tasks/main.yml
+'7  2  23  ~/roles/redis/tasks/main.yml
+'8  1  0  ~/roles/java/tasks/main.yml
+'9  9  0  ~/roles/java/tasks/main.yml
 
 # Jumplist (newest first):
+-'  1  0  ~/roles/elasticsearch/tasks/main.yml
 -'  1  0  ~/roles/filebeat/tasks/main.yml
 -'  9  17  ~/roles/filebeat/template/filebeat.j2
 -'  1  0  ~/roles/filebeat/template/filebeat.j2
@@ -142,6 +143,9 @@
 -'  18  58  ~/roles/java/tasks/main.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/roles/elasticsearch/tasks/main.yml
+	"	1	0
 
 > ~/roles/filebeat/tasks/main.yml
 	"	1	0

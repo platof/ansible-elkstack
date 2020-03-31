@@ -1,15 +1,14 @@
-- name: install java
-  apt:
-    name: default-jre
-  update_cache: yes
-
 - name: download the elasticsearch deb file
-  apt:
-    deb: https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.0.1-amd64.deb
-  dest: /home/vagrant
-  sudo: yes
+  get_url:
+    url: https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.1-amd64.deb
+    dest: /home/vagrant
+    validate_certs: no
 
-- name: config template
+- name: Install Elasticsearch
+  apt:
+    deb: elasticsearch-7.6.1-amd64.deb
+
+- name: configure template
   template: 
     src: config.j2
     dest: /etc/elasticsearch/elasticsearch.yml

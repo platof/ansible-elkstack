@@ -1,11 +1,11 @@
-#- name: download filebeat
-#  get_url:
-#    url: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
-#    dest: /home/vagrant
+- name: download filebeat
+  get_url:
+    url: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+    dest: /home/vagrant
 
-#- name: install filebeat
-#  apt:
-#    deb: filebeat-7.6.1-amd64.deb
+- name: install filebeat
+  apt:
+    deb: filebeat-7.6.1-amd64.deb
 
 - name: copy the filebeat config 
   template:
