@@ -1,6 +1,0 @@
-- hosts: java
-  user: vagrant
-  become: yes
-  roles:
-  - elasticsearch
-

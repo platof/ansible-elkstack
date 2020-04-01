@@ -2,12 +2,11 @@
   user: vagrant
   become: yes
   roles:
-  - { role: java }
-  - { role: logstash }
-  - { role: filebeat }
-  - { role: redis }
-  - { role: elasticsearch }
-  - { role: nginx }
-  - { role: kibana }
-
+  - java
+  - redis
+  - filebeat
+  - logstash
+  - elasticsearch
+  - kibana
+  - nginx
     

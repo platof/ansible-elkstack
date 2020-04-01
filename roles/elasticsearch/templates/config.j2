@@ -1,8 +1,7 @@
 cluster.name: Tetrasearch
-node.name: {{ name }}
+node.name: tetrasearch2
 path.data: /var/lib/elasticsearch
 path.logs: /var/log/elasticsearch
-network.host: {{ ip }}
-discovery.seed_hosts: ["192.168.56.51", "192.168.56.52"]
-cluster.initial_master_nodes: ["192.168.56.51"]
-node.master: {{ master }}
+network.host: 192.168.56.58
+discovery.seed_hosts: ["192.168.56.57", "192.168.56.58"]
+cluster.initial_master_nodes: ["192.168.56.57"]

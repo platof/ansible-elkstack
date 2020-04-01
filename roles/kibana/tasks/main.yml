@@ -1,15 +1,16 @@
-- name: Install Kibana
-  apt:
-    deb: https://artifacts.elastic.co/downloads/kibana/kibana-7.0.1-amd64.deb
-  sudo: yes
-  dest: /home/vagrant
+- name: download Kibana
+  get_url:
+    url: https://artifacts.elastic.co/downloads/kibana/kibana-7.6.1-amd64.deb
+    dest: /home/vagrant
 
+- name: install kibana
+  apt:
+    deb: kibana-7.6.1-amd64.deb
 
 - name: copy the kibana config
   template:
     src: kibana.j2
     dest: /etc/kibana/kibana.yml
-  sudo: yes 
 
   
 - name: Ensure kibana is started
