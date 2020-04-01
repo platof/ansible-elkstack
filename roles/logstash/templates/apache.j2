@@ -20,7 +20,7 @@ filter {
 
 output {
    elasticsearch {
-      hosts => "192.168.56.51"
+      hosts => ["localhost:9200"]
       index => "logstash_apache_log"
       document_type => "demo2"
 }

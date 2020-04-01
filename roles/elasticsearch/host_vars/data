@@ -1,4 +1,7 @@
-name: tetra2
-ip: 192.168.56.52
-master: false
-
+c_name: Tetrasearch
+n_name: tetrasearch1
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+n_host: 192.168.56.58
+d_s_hosts: ["192.168.56.57", "192.168.56.58"]
+c_i_mnodes: ["192.168.56.57"]
